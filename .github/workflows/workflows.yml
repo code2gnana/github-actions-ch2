@@ -1,0 +1,19 @@
+name: Sample workflow
+
+on: 
+  workflow_dispatch: 
+  #push: 
+  #  branches: 
+  #    - develop
+
+jobs: 
+  build: 
+    runs-on: 
+      - windows
+    steps: 
+      - uses: actions/checkout@v3
+      - name: runs a simple Command
+        run: | 
+          echo "hello world"
+        shell: 
+          cmd
